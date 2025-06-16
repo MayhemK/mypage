@@ -6,6 +6,12 @@ import Example from '@/components/Example.vue';
 
 <template>
   <Example />
+
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.bg-pump {
+  background-image: url(../assets/img/NewAviIcon.png);
+  max-height: 100dvh;
+}
+</style>
