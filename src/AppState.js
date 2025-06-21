@@ -13,6 +13,8 @@ export const AppState = reactive({
   /** @type {import('./models/Job.js').Job[]} */
   jobs: [],
   /** @type {import('./models/Pet.js').Pet[]} */
-  pets: []
+  pets: [],
+  /** @type {import('./models/Post.js').Post[]} */
+  posts: []
 })
 

@@ -41,6 +41,11 @@ watch(theme, () => {
               Gregslist Page
             </RouterLink>
           </li>
+          <li>
+            <RouterLink :to="{ name: 'Code' }" class="btn text-green selectable">
+              Code Page
+            </RouterLink>
+          </li>
         </ul>
         <!-- LOGIN COMPONENT HERE -->
         <div class="ms-auto">
