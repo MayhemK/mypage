@@ -5,6 +5,8 @@ import { computed, ref } from 'vue';
 
 
 const snake = computed(() => AppState.snakes)
+const CU = computed(() => AppState.ClickUpgrades)
+const AU = computed(() => AppState.AutoUpgrades)
 
 function hatch() {
   clickerService.hatch()
@@ -21,12 +23,20 @@ function hatch() {
           Click to increase snakes
         </div>
         <div class="btn p-5 m-5" @click="hatch()">🐍</div>
+      </div>
+      <div class="col-5">
+        <div class="fs-3 m-4 text-end">click power</div>
+      </div>
+      <div class="col-2">
         <div class="fs-3 m-4">{{ snake }}</div>
+      </div>
+      <div class="col-5">
+        <div class="fs-3 m-4 text-start">auto hatch</div>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        hi
+        Hatch Upgrades
       </div>
     </div>
     <div class="row">

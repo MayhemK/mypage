@@ -16,6 +16,14 @@ export const AppState = reactive({
   pets: [],
   /** @type {import('./models/Post.js').Post[]} */
   posts: [],
-  snakes: 0
+  snakes: 0,
+  ClickUpgrades: [
+    { name: '1', power: 1, price: 15, quantity: 0 },
+    { name: '2', power: 5, price: 45, quantity: 0 }
+  ],
+  AutoUpgrades: [
+    { name: '3', power: 10, price: 20, quantity: 0 },
+    { name: '4', power: 25, price: 100, quantity: 0 }
+  ]
 })
 
