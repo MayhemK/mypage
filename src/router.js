@@ -47,6 +47,11 @@ const routes = [
     component: loadPage('CodePage')
   },
   {
+    path: '/clicker',
+    name: 'Clicker',
+    component: loadPage('Clicker')
+  },
+  {
     path: '/account',
     name: 'Account',
     component: loadPage('AccountPage'),
