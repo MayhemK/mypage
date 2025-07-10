@@ -17,13 +17,20 @@ export const AppState = reactive({
   /** @type {import('./models/Post.js').Post[]} */
   posts: [],
   snakes: 0,
+  clickLevel: 1,
+  autoLevel: 0,
   ClickUpgrades: [
-    { name: '1', power: 1, price: 15, quantity: 0 },
-    { name: '2', power: 5, price: 45, quantity: 0 }
+    { name: 'Mouse', power: 1, price: 15, quantity: 0 },
+    { name: 'Quail', power: 5, price: 60, quantity: 0 },
+    { name: 'Gopher', power: 20, price: 180, quantity: 0 },
+    { name: 'Chicken', power: 75, price: 540, quantity: 0 }
+
   ],
   AutoUpgrades: [
-    { name: '3', power: 10, price: 20, quantity: 0 },
-    { name: '4', power: 25, price: 100, quantity: 0 }
+    { name: 'Rabbit', power: 10, price: 20, quantity: 0 },
+    { name: 'Duck', power: 50, price: 150, quantity: 0 },
+    { name: 'Boar', power: 200, price: 750, quantity: 0 },
+    { name: 'Turkey', power: 800, price: 3000, quantity: 0 }
   ]
 })
 

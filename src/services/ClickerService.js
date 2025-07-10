@@ -1,9 +1,17 @@
 import { AppState } from "@/AppState.js"
 
 class ClickerService {
-  hatch() {
-    AppState.snakes++
+  hatch(power) {
+    AppState.snakes += power
+  }
+  increaseCL(power, price) {
+    AppState.clickLevel += power
+    AppState.snakes -= price
 
+  }
+  increaseAL(power, price) {
+    AppState.autoLevel += power
+    AppState.snakes -= price
   }
 }
 
