@@ -20,17 +20,17 @@ export const AppState = reactive({
   clickLevel: 1,
   autoLevel: 0,
   ClickUpgrades: [
-    { name: 'Mouse', power: 1, price: 15, quantity: 0 },
-    { name: 'Quail', power: 5, price: 60, quantity: 0 },
-    { name: 'Gopher', power: 20, price: 180, quantity: 0 },
-    { name: 'Chicken', power: 75, price: 540, quantity: 0 }
+    { id: 1, name: 'Mouse', power: 1, price: 15, quantity: 0 },
+    { id: 2, name: 'Quail', power: 5, price: 60, quantity: 0 },
+    { id: 3, name: 'Gopher', power: 20, price: 180, quantity: 0 },
+    { id: 4, name: 'Chicken', power: 75, price: 540, quantity: 0 }
 
   ],
   AutoUpgrades: [
-    { name: 'Rabbit', power: 10, price: 20, quantity: 0 },
-    { name: 'Duck', power: 50, price: 150, quantity: 0 },
-    { name: 'Boar', power: 200, price: 750, quantity: 0 },
-    { name: 'Turkey', power: 800, price: 3000, quantity: 0 }
+    { id: 5, name: 'Rabbit', power: 10, price: 20, quantity: 0 },
+    { id: 6, name: 'Duck', power: 50, price: 150, quantity: 0 },
+    { id: 7, name: 'Boar', power: 200, price: 750, quantity: 0 },
+    { id: 8, name: 'Turkey', power: 800, price: 3000, quantity: 0 }
   ]
 })
 

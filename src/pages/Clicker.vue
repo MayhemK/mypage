@@ -1,28 +1,17 @@
 <script setup>
 import { AppState } from '@/AppState.js';
+import Upgrades from '@/components/ClickerComponents/Upgrades.vue';
 import { clickerService } from '@/services/ClickerService.js';
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
 
 
 const snake = computed(() => AppState.snakes)
-const CU = computed(() => AppState.ClickUpgrades)
-const AU = computed(() => AppState.AutoUpgrades)
 const cl = computed(() => AppState.clickLevel)
-const al = computed(() => AppState.autoLevel)
 
 function hatch(TPL) {
   clickerService.hatch(TPL)
 }
-function increaseCL(power, price) {
-  if (snake.value >= price) {
-    clickerService.increaseCL(power, price)
-  }
-}
-function increaseAL(power, price) {
-  if (snake.value >= price) {
-    clickerService.increaseAL(power, price)
-  }
-}
+
 </script>
 
 
@@ -45,35 +34,7 @@ function increaseAL(power, price) {
         <div class="fs-3 m-4 text-start">auto hatch</div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-12">
-        Hatch Upgrades
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-6">
-        Click Upgrades {{ cl }}
-        <div v-for="u in CU" :key="u.price">
-          <div>
-            {{ u.power }}
-            {{ u.name }}
-            {{ u.quantity * u.power }}
-            <button @click="increaseCL(u.power, u.price)">{{ u.price }}</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-6">
-        Timer Upgrades {{ al }}
-        <div v-for="u in AU" :key="u.price">
-          <div>
-            {{ u.power }}
-            {{ u.name }}
-            {{ u.quantity * u.power }}
-            <button @click="increaseAL(u.power, u.price)">{{ u.price }}</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Upgrades />
   </div>
 </template>
 
