@@ -41,6 +41,7 @@ function increaseAL(power, price, id) {
       </div>
     </div>
     <div class="col-6">
+      <p>TIMER NOT IMPLEMENTED YET</p>
       Timer Upgrades {{ al }}
       <div v-for="u in AU" :key="u.price">
         <div>
