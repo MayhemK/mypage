@@ -1,6 +1,6 @@
 <script setup>
 import { AppState } from '@/AppState.js';
-import CarListing from '@/components/CarListing.vue';
+import CarListing from '@/components/GregslistComponents/CarListing.vue';
 import { carsService } from '@/services/CarsService.js';
 import { Pop } from '@/utils/Pop.js';
 import { computed, onMounted } from 'vue';

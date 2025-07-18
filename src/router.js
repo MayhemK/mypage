@@ -52,6 +52,11 @@ const routes = [
     component: loadPage('Clicker')
   },
   {
+    path: '/template',
+    name: 'Template',
+    component: loadPage('ClonePage')
+  },
+  {
     path: '/account',
     name: 'Account',
     component: loadPage('AccountPage'),

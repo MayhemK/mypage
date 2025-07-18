@@ -33,13 +33,18 @@
               </RouterLink>
               <div class="ms-2">A Clicker Game</div>
             </div>
+            <div>
+              <RouterLink :to="{ name: 'Template' }" class="btn btn-success m-2">Website</RouterLink>
+              <div class="ms-2">A simple website with themes</div>
+            </div>
           </div>
         </div>
       </div>
       <div class="col-8">
-        <div>
-          Welcome to my example page! I am using this page to give examples of projects I have worked on and work on new
-          ones at the same time.
+        <div class="border box rounded-2 pt-5 p-5">
+          Welcome to my example page! I am using this page to give examples of projects I have worked on and continue to
+          build new
+          ones!
         </div>
       </div>
     </div>
@@ -50,5 +55,9 @@
 .bg-pump {
   background-image: url(../assets/img/NewAviIcon.png);
   max-height: 100dvh;
+}
+
+.box {
+  min-height: 60dvh;
 }
 </style>

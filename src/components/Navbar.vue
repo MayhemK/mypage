@@ -17,10 +17,10 @@ watch(theme, () => {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-md bg-codeworks border-bottom border-vue">
+  <nav class="navbar navbar-expand-md bg-dark border-bottom border-mk">
     <div class="container gap-2">
       <RouterLink :to="{ name: 'Home' }" class="d-flex align-items-center text-light">
-        <img class="navbar-brand" alt="logo" src="/img/cw-logo.png" height="45" />
+        <img class="navbar-brand" alt="logo" src="/src/assets/img/NewAviIcon.png" height="45" />
         <b class="fs-5">Vue Starter</b>
       </RouterLink>
       <!-- collapse button -->
@@ -36,7 +36,7 @@ watch(theme, () => {
               About
             </RouterLink>
           </li>
-          <li>
+          <!-- <li>
             <RouterLink :to="{ name: 'GregsList' }" class="btn text-green selectable">
               Gregslist Page
             </RouterLink>
@@ -45,7 +45,7 @@ watch(theme, () => {
             <RouterLink :to="{ name: 'Code' }" class="btn text-green selectable">
               Code Page
             </RouterLink>
-          </li>
+          </li> -->
         </ul>
         <!-- LOGIN COMPONENT HERE -->
         <div class="ms-auto">

@@ -9,7 +9,7 @@ class ClickerService {
     AppState.snakes -= price
     const arrayId = id - 1
     AppState.ClickUpgrades[arrayId].quantity++
-    const priceIncrease = (AppState.ClickUpgrades[arrayId].price * 1.5) * AppState.ClickUpgrades[arrayId].quantity
+    const priceIncrease = ((AppState.ClickUpgrades[arrayId].price * 1.5) * AppState.ClickUpgrades[arrayId].quantity)
     AppState.ClickUpgrades[arrayId].price = priceIncrease
   }
   increaseAL(power, price, id) {

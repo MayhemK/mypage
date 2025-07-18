@@ -1,7 +1,7 @@
 <script setup>
 import { AppState } from '@/AppState.js';
-import PostCreate from '@/components/PostCreate.vue';
-import PostFeed from '@/components/PostFeed.vue';
+import PostCreate from '@/components/PostComponents/PostCreate.vue';
+import PostFeed from '@/components/PostComponents/PostFeed.vue';
 import { Post } from '@/models/Post.js';
 import { feedService } from '@/services/FeedService.js';
 import { Pop } from '@/utils/Pop.js';
