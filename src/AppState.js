@@ -16,6 +16,7 @@ export const AppState = reactive({
   pets: [],
   /** @type {import('./models/Post.js').Post[]} */
   posts: [],
+  themeValue: 0,
   snakes: 0,
   clickLevel: 1,
   autoLevel: 0,

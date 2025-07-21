@@ -1,37 +1,42 @@
 <script setup>
+import { AppState } from '@/AppState.js';
+import { cloneService } from '@/services/CloneService.js';
+import { computed } from 'vue';
+
+
+const themeValue = computed(() => AppState.themeValue)
+
+function changeThemeValue(select) {
+  const themeNum = select
+  AppState.themeValue = themeNum
+}
+
+
+
 
 </script>
 
 
 <template>
-  <!-- <section>
-    <div class="container py-1">
-      <div class="row justify-content-center">
-        <div class="col-10 col-md-6">
-          <h1><span class="mdi mdi-star-shooting text-primary"></span>Website Template</h1>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="container">
-    <div class="row">
-      <div class="col-12 col-md-3">
-        <p>Form for sign up</p>
-        <div class="card">
-          <b>Sign up form</b>
-
-        </div>
-      </div>
-    </div>
-  </section> -->
 
   <body class="debug">
     <header class="sticky-top">
       <!-- title bar -->
-      <section class="container-fluid color-bar py-1 ">
+      <section :class="`darkBar-${themeValue}`" class="container-fluid py-1 " id="darkBar">
         <div class="row justify-content-center">
           <div class="col-md-10 col-8  ">
-            <h1><span class="mdi mdi-star-shooting text-primary"></span> Lorem, ipsum.</h1>
+            <h1><span class="mdi mdi-star-shooting text-primary outline bg-light rounded-5 px-2"></span> Lorem, ipsum.
+            </h1>
+          </div>
+          <div class="col-md-6 col-4 m-2">
+            <div v-if="themeValue == 0" class="outline btn btn-dark m-2">BORING</div>
+            <div v-if="themeValue == 1" class="outline btn btn-success m-2">GREEN</div>
+            <div v-if="themeValue == 2" class="outline btn btn-danger m-2">RED</div>
+            <div v-if="themeValue == 3" class="outline btn btn-primary text-light m-2">BLUE</div>
+            <div class="btn btn-dark m-2" @click="changeThemeValue(0)">Plain</div>
+            <div class="btn btn-success m-2" @click="changeThemeValue(1)">Forrest</div>
+            <div class="btn btn-danger m-2" @click="changeThemeValue(2)">Desert</div>
+            <div class="btn btn-primary text-light m-2" @click="changeThemeValue(3)">Ocean</div>
           </div>
         </div>
       </section>
@@ -105,7 +110,8 @@
 
       <!-- spill card -->
       <section class="container-fluid ">
-        <div class="row pady flex-row-reverse justify-content-start color-bar position-relative">
+        <div :class="`darkBar-${themeValue}`" class="row pady flex-row-reverse justify-content-start position-relative"
+          id="darkBar2">
           <div class="col-12 col-md-6 ">
             <div class="card spill me-md-5 ">
               <div class="card-body">
@@ -115,16 +121,14 @@
                       <h3><span class="mdi mdi-wrench text-primary"></span></h3>
                     </div>
                     <div class="col-10">
-                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae quam voluptatem provident
-                        necessitatibus, maiores saepe!</p>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing </p>
                     </div>
                     <div class="col-md-1 col-2 d-none d-md-block"></div>
                     <div class="col-md-1 col-2">
                       <h3><i class="mdi mdi-car text-primary"></i></h3>
                     </div>
                     <div class="col-10">
-                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae quam voluptatem provident
-                        necessitatibus, maiores saepe!</p>
+                      <p>Lorem ipsum, dolor sit amet</p>
                     </div>
                     <div class="col-md-1 col-2 d-none d-md-block"></div>
                     <div class="col-md-1 col-2">
@@ -133,24 +137,21 @@
                       </h3>
                     </div>
                     <div class="col-10">
-                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae quam voluptatem provident
-                        necessitatibus, maiores saepe!</p>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                     <div class="col-md-1 col-2 d-none d-md-block"></div>
                     <div class="col-md-1 col-2">
                       <h3><i class="mdi mdi-message text-primary"></i></h3>
                     </div>
                     <div class="col-10">
-                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae quam voluptatem provident
-                        necessitatibus, maiores saepe!</p>
+                      <p>Lorem ipsum, dolor sit amet consectetur</p>
                     </div>
                     <div class="col-md-1 col-2 d-none d-md-block"></div>
                     <div class="col-md-1 col-2">
                       <h3><i class="mdi mdi-hexagram text-primary"></i></h3>
                     </div>
                     <div class="col-10">
-                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae quam voluptatem provident
-                        necessitatibus, maiores saepe!</p>
+                      <p>Lorem ipsum, dolor sit amet consectetur</p>
                     </div>
                     <div class="col-md-1 col-2"></div>
                   </div>
@@ -240,7 +241,7 @@
         </div>
       </section>
       <!-- final words -->
-      <section class="container-fluid color-bar pady">
+      <section :class="`darkBar-${themeValue}`" class="container-fluid pady">
         <div class="row">
           <div class="col-12">
             <h1>Lorem ipsum dolor sit amet.</h1>
@@ -281,6 +282,22 @@ body {
 
 .color-bar2 {
   background-color: lightgray;
+}
+
+.darkBar-0 {
+  background-color: gray;
+}
+
+.darkBar-1 {
+  background-color: green;
+}
+
+.darkBar-2 {
+  background-color: red;
+}
+
+.darkBar-3 {
+  background-color: blue;
 }
 
 .bg-image {
