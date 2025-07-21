@@ -57,6 +57,11 @@ const routes = [
     component: loadPage('ClonePage')
   },
   {
+    path: '/ai',
+    name: 'AIPage',
+    component: loadPage('AIPage')
+  },
+  {
     path: '/account',
     name: 'Account',
     component: loadPage('AccountPage'),

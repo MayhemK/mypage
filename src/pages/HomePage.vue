@@ -1,10 +1,12 @@
 <script setup>
 
 
+
 </script>
 
 <template>
   <section class="container">
+
     <div class="row mt-3 ">
       <div class="col-4">
         <div class="card">
@@ -36,6 +38,10 @@
             <div>
               <RouterLink :to="{ name: 'Template' }" class="btn btn-success m-2">Website</RouterLink>
               <div class="ms-2">A simple website with themes</div>
+            </div>
+            <div>
+              <RouterLink :to="{ name: 'AIPage' }" class="btn btn-success m-2">AI Test</RouterLink>
+              <div class="ms-2">A test implementing AI into a page</div>
             </div>
           </div>
         </div>
