@@ -6,6 +6,8 @@ import { computed } from 'vue';
 
 const themeValue = computed(() => AppState.themeValue)
 
+
+
 function changeThemeValue(select) {
   const themeNum = select
   AppState.themeValue = themeNum
@@ -19,7 +21,7 @@ function changeThemeValue(select) {
 
 <template>
 
-  <body class="debug">
+  <body :class="`bg-color-${themeValue}`">
     <header class="sticky-top">
       <!-- title bar -->
       <section :class="`darkBar-${themeValue}`" class="container-fluid py-1 " id="darkBar">
@@ -28,12 +30,14 @@ function changeThemeValue(select) {
             <h1><span class="mdi mdi-star-shooting text-primary outline bg-light rounded-5 px-2"></span> Lorem, ipsum.
             </h1>
           </div>
-          <div class="col-md-6 col-4 m-2">
+          <div class="col-6 text-center d-none d-md-block">
             <div v-if="themeValue == 0" class="outline btn btn-dark m-2">BORING</div>
             <div v-if="themeValue == 1" class="outline btn btn-success m-2">GREEN</div>
             <div v-if="themeValue == 2" class="outline btn btn-danger m-2">RED</div>
             <div v-if="themeValue == 3" class="outline btn btn-primary text-light m-2">BLUE</div>
-            <div class="btn btn-dark m-2" @click="changeThemeValue(0)">Plain</div>
+          </div>
+          <div class="col-6 text-center">
+            <div class="btn btn-dark m-2 ms-5" @click="changeThemeValue(0)">Plain</div>
             <div class="btn btn-success m-2" @click="changeThemeValue(1)">Forrest</div>
             <div class="btn btn-danger m-2" @click="changeThemeValue(2)">Desert</div>
             <div class="btn btn-primary text-light m-2" @click="changeThemeValue(3)">Ocean</div>
@@ -44,7 +48,7 @@ function changeThemeValue(select) {
 
     <main>
       <!-- picture bar with form -->
-      <section class="container-fluid bg-image ">
+      <section :class="`bg-image-${themeValue}`" class="container-fluid">
         <div class="row justify-content text-light pady">
           <div class="col-12 col-md-3">
             <p class="text-capitalize ">subtle heading</p>
@@ -171,12 +175,10 @@ function changeThemeValue(select) {
         </div>
       </section>
       <!-- float pic and more -->
-      <section class="container-fluid color-bar2 pady ">
+      <section :class="`lightBar-${themeValue}`" class="container-fluid pady ">
         <div class="row align-items-center ">
           <div class="col-md-4 col-12">
-            <img class="img-fluid"
-              src="https://images.unsplash.com/photo-1522087066130-0c8c39bb0558?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="image">
+            <img class="img-fluid" :src="`${themeValue}`" alt="image">
           </div>
           <div class="col-md-8 col-12">
             <div class="row ps-5">
@@ -276,14 +278,6 @@ body {
   background-color: rgb(0, 0, 110);
 }
 
-.color-bar {
-  background-color: darkgrey;
-}
-
-.color-bar2 {
-  background-color: lightgray;
-}
-
 .darkBar-0 {
   background-color: gray;
 }
@@ -300,9 +294,56 @@ body {
   background-color: blue;
 }
 
-.bg-image {
+.lightBar-0 {
+  background-color: rgb(182, 182, 182);
+}
+
+.lightBar-1 {
+  background-color: rgb(0, 204, 0);
+}
+
+.lightBar-2 {
+  background-color: rgb(243, 102, 102);
+}
+
+.lightBar-3 {
+  background-color: rgb(127, 127, 253);
+}
+
+.bg-image-0 {
   background-image: url(https://images.unsplash.com/photo-1502134249126-9f3755a50d78?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   background-size: cover;
+}
+
+.bg-image-1 {
+  background-image: url(https://images.unsplash.com/photo-1440581572325-0bea30075d9d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+}
+
+.bg-image-2 {
+  background-image: url(https://images.unsplash.com/photo-1542401886-65d6c61db217?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+}
+
+.bg-image-3 {
+  background-image: url(https://images.unsplash.com/photo-1439405326854-014607f694d7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+}
+
+.bg-color-0 {
+  background-color: black;
+}
+
+.bg-color-1 {
+  background-color: rgb(1, 43, 0);
+}
+
+.bg-color-2 {
+  background-color: rgb(94, 0, 62);
+}
+
+.bg-color-3 {
+  background-color: rgb(0, 1, 75);
 }
 
 .pady {
