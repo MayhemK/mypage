@@ -6,7 +6,7 @@ import { computed } from 'vue';
 
 const themeValue = computed(() => AppState.themeValue)
 
-
+// define image sources with values- set trigger to call values- bind :src to receive value
 
 function changeThemeValue(select) {
   const themeNum = select
