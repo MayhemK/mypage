@@ -2,6 +2,10 @@ import Axios from 'axios'
 import { baseURL } from '../env.js'
 import { logger } from '../utils/Logger.js'
 
+export const mtg = Axios.create({
+  baseURL: 'https://api.magicthegathering.io/',
+  timeout: 8000
+})
 export const sandBox = Axios.create({
   baseURL: 'https://sandbox.codeworksacademy.com/',
   timeout: 8000

@@ -32,6 +32,8 @@ export const AppState = reactive({
     { id: 6, name: 'Duck', power: 50, price: 150, quantity: 0 },
     { id: 7, name: 'Boar', power: 200, price: 750, quantity: 0 },
     { id: 8, name: 'Turkey', power: 800, price: 3000, quantity: 0 }
-  ]
+  ],
+  /** @type {import('./models/Card.js').Card[]} */
+  cards: []
 })
 
