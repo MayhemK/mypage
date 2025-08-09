@@ -18,3 +18,5 @@ class AIService {
 }
 
 export const aiService = new AIService()
+
+// curl get https://api.scryfall.com/cards/named?fuzzy=aur+warlead

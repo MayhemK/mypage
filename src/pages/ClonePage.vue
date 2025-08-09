@@ -41,10 +41,14 @@ function changeThemeValue(select) {
             </h1>
           </div>
           <div class="col-6 text-center d-none d-md-block">
-            <div v-if="themeValue == 0" :class="`bg-color-${themeValue}`" class="outline btn  m-2">BORING</div>
-            <div v-if="themeValue == 1" :class="`bg-color-${themeValue}`" class="outline btn  m-2">GREEN</div>
-            <div v-if="themeValue == 2" :class="`bg-color-${themeValue}`" class="outline btn  m-2">RED</div>
-            <div v-if="themeValue == 3" :class="`bg-color-${themeValue}`" class="outline btn text-light m-2">BLUE</div>
+            <div v-if="themeValue == 0" :class="`bg-color-${themeValue}`" class="outline btn  m-2">Gray example theme
+            </div>
+            <div v-if="themeValue == 1" :class="`bg-color-${themeValue}`" class="outline btn  m-2">Green example theme
+            </div>
+            <div v-if="themeValue == 2" :class="`bg-color-${themeValue}`" class="outline btn  m-2">Red example theme
+            </div>
+            <div v-if="themeValue == 3" :class="`bg-color-${themeValue}`" class="outline btn text-light m-2">Blue
+              example theme</div>
           </div>
           <div class="col-6 text-center">
             <div class="btn btn-dark m-2 ms-5" @click="changeThemeValue(0)">Plain</div>
