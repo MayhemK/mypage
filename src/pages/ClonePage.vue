@@ -6,6 +6,15 @@ import { computed } from 'vue';
 
 const themeValue = computed(() => AppState.themeValue)
 
+const themeImageMap = {
+  0: 'https://images.unsplash.com/photo-1522087066130-0c8c39bb0558?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  1: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?q=80&w=776&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  2: 'https://images.unsplash.com/photo-1533066636271-fdbe3e84ad80?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  3: 'https://images.unsplash.com/photo-1485955891060-a3318433e95f?q=80&w=770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+}
+const themeImage = computed(() => themeImageMap[AppState.themeValue])
+
+
 // define image sources with values- set trigger to call values- bind :src to receive value
 
 function changeThemeValue(select) {
@@ -178,7 +187,7 @@ function changeThemeValue(select) {
       <section :class="`lightBar-${themeValue}`" class="container-fluid pady ">
         <div class="row align-items-center ">
           <div class="col-md-4 col-12">
-            <img class="img-fluid" :src="`${themeValue}`" alt="image">
+            <img class="img-fluid" :src="themeImage" alt="image">
           </div>
           <div class="col-md-8 col-12">
             <div class="row ps-5">
