@@ -36,14 +36,15 @@ function changeThemeValue(select) {
       <section :class="`darkBar-${themeValue}`" class="container-fluid py-1 " id="darkBar">
         <div class="row justify-content-center">
           <div class="col-md-10 col-8  ">
-            <h1><span class="mdi mdi-star-shooting text-primary outline bg-light rounded-5 px-2"></span> Lorem, ipsum.
+            <h1><span :class="`font-${themeValue}`"
+                class="mdi mdi-star-shooting outline bg-light rounded-5 px-2"></span> Lorem, ipsum.
             </h1>
           </div>
           <div class="col-6 text-center d-none d-md-block">
-            <div v-if="themeValue == 0" class="outline btn btn-dark m-2">BORING</div>
-            <div v-if="themeValue == 1" class="outline btn btn-success m-2">GREEN</div>
-            <div v-if="themeValue == 2" class="outline btn btn-danger m-2">RED</div>
-            <div v-if="themeValue == 3" class="outline btn btn-primary text-light m-2">BLUE</div>
+            <div v-if="themeValue == 0" :class="`bg-color-${themeValue}`" class="outline btn  m-2">BORING</div>
+            <div v-if="themeValue == 1" :class="`bg-color-${themeValue}`" class="outline btn  m-2">GREEN</div>
+            <div v-if="themeValue == 2" :class="`bg-color-${themeValue}`" class="outline btn  m-2">RED</div>
+            <div v-if="themeValue == 3" :class="`bg-color-${themeValue}`" class="outline btn text-light m-2">BLUE</div>
           </div>
           <div class="col-6 text-center">
             <div class="btn btn-dark m-2 ms-5" @click="changeThemeValue(0)">Plain</div>
@@ -62,7 +63,8 @@ function changeThemeValue(select) {
           <div class="col-12 col-md-3">
             <p class="text-capitalize ">subtle heading</p>
             <div class="card">
-              <p class="text-capitalize ps-3 pt-3 text-primary "><b>less subtle heading</b></p>
+              <p :class="`font-${themeValue}`" class="text-capitalize ps-3 pt-3 "><b>less subtle
+                  heading</b></p>
               <div class="container-fluid">
                 <div class="row ">
                 </div>
@@ -97,7 +99,7 @@ function changeThemeValue(select) {
                         <input type="checkbox" class="checkbox">
                         <label for="form-check-label ">Save Password</label>
                       </div>
-                      <button class="btn btn-primary text-uppercase mb-3">submit</button>
+                      <button :class="`bg-color-${themeValue}`" class="btn text-uppercase mb-3">submit</button>
                     </div>
                   </div>
                 </div>
@@ -108,7 +110,7 @@ function changeThemeValue(select) {
             <div class="container-fluid">
               <div class="row pt-5 ">
                 <div class="col-1 text-end ">
-                  <h1><span class="mdi mdi-star-shooting-outline text-primary"></span></h1>
+                  <h1><span :class="`font-${themeValue}`" class="mdi mdi-star-shooting-outline "></span></h1>
                 </div>
                 <div class="col-8">
                   <h3>Text over image</h3>
@@ -131,14 +133,14 @@ function changeThemeValue(select) {
                 <div class="container-fluid">
                   <div class="row me-5 justify-content-start ">
                     <div class="col-md-1 col-2">
-                      <h3><span class="mdi mdi-wrench text-primary"></span></h3>
+                      <h3><span :class="`font-${themeValue}`" class="mdi mdi-wrench "></span></h3>
                     </div>
                     <div class="col-10">
                       <p>Lorem ipsum, dolor sit amet consectetur adipisicing </p>
                     </div>
                     <div class="col-md-1 col-2 d-none d-md-block"></div>
                     <div class="col-md-1 col-2">
-                      <h3><i class="mdi mdi-car text-primary"></i></h3>
+                      <h3><i :class="`font-${themeValue}`" class="mdi mdi-car "></i></h3>
                     </div>
                     <div class="col-10">
                       <p>Lorem ipsum, dolor sit amet</p>
@@ -146,7 +148,7 @@ function changeThemeValue(select) {
                     <div class="col-md-1 col-2 d-none d-md-block"></div>
                     <div class="col-md-1 col-2">
                       <h3>
-                        <div class="mdi mdi-phone text-primary"></div>
+                        <div :class="`font-${themeValue}`" class="mdi mdi-phone "></div>
                       </h3>
                     </div>
                     <div class="col-10">
@@ -154,14 +156,14 @@ function changeThemeValue(select) {
                     </div>
                     <div class="col-md-1 col-2 d-none d-md-block"></div>
                     <div class="col-md-1 col-2">
-                      <h3><i class="mdi mdi-message text-primary"></i></h3>
+                      <h3><i :class="`font-${themeValue}`" class="mdi mdi-message "></i></h3>
                     </div>
                     <div class="col-10">
                       <p>Lorem ipsum, dolor sit amet consectetur</p>
                     </div>
                     <div class="col-md-1 col-2 d-none d-md-block"></div>
                     <div class="col-md-1 col-2">
-                      <h3><i class="mdi mdi-hexagram text-primary"></i></h3>
+                      <h3><i :class="`font-${themeValue}`" class="mdi mdi-hexagram "></i></h3>
                     </div>
                     <div class="col-10">
                       <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -192,7 +194,7 @@ function changeThemeValue(select) {
           <div class="col-md-8 col-12">
             <div class="row ps-5">
               <div class="col-1">
-                <h1><span class="mdi mdi-shield-check text-primary "></span></h1>
+                <h1><span :class="`font-${themeValue}`" class="mdi mdi-shield-check"></span></h1>
               </div>
               <div class="col-11">
                 <h4>Lorem ipsum dolor sit amet.</h4>
@@ -214,7 +216,7 @@ function changeThemeValue(select) {
             </div>
             <div class="row justify-content-end pe-5">
               <div class="col-2">
-                <button type="button" class="btn btn-primary rounded-3">MORE</button>
+                <button :class="`bg-color-${themeValue}`" type="button" class="btn rounded-3">MORE</button>
               </div>
             </div>
           </div>
@@ -227,17 +229,18 @@ function changeThemeValue(select) {
             <div class="card">
               <div class="card-body">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, hic!</p>
-                <h6 class="text-primary">- blah blah mcblah</h6>
+                <h6 :class="`font-${themeValue}`">- blah blah mcblah</h6>
               </div>
             </div>
           </div>
           <div class="col-md-4 col-12 order-1 order-md-2">
             <div class="card">
               <div class="card-body">
-                <h1><i class="mdi mdi-star-circle text-primary"></i><i class="mdi mdi-star-circle text-primary"></i><i
-                    class="mdi mdi-star-circle text-primary"></i></h1>
+                <h1><i :class="`font-${themeValue}`" class="mdi mdi-star-circle"></i><i :class="`font-${themeValue}`"
+                    class="mdi mdi-star-circle"></i><i :class="`font-${themeValue}`" class="mdi mdi-star-circle"></i>
+                </h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, hic!</p>
-                <h6 class="text-primary">- blah blah mcblah</h6>
+                <h6 :class="`font-${themeValue}`">- blah blah mcblah</h6>
               </div>
             </div>
           </div>
@@ -245,7 +248,7 @@ function changeThemeValue(select) {
             <div class="card">
               <div class="card-body">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, hic!</p>
-                <h6 class="text-primary">- blah blah mcblah</h6>
+                <h6 :class="`font-${themeValue}`">- blah blah mcblah</h6>
               </div>
             </div>
           </div>
@@ -341,18 +344,46 @@ body {
 
 .bg-color-0 {
   background-color: black;
+  color: white;
+  text-shadow: 1px 1px 3px black;
 }
 
 .bg-color-1 {
   background-color: rgb(1, 43, 0);
+  color: white;
+  text-shadow: 1px 1px 3px black;
 }
 
 .bg-color-2 {
   background-color: rgb(94, 0, 62);
+  color: white;
+  text-shadow: 1px 1px 3px black;
 }
 
 .bg-color-3 {
   background-color: rgb(0, 1, 75);
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
+.font-0 {
+  color: black;
+  text-shadow: 1px 1px 3px rgb(121, 121, 121);
+}
+
+.font-1 {
+  color: rgb(0, 126, 0);
+  text-shadow: 1px 1px 3px black;
+}
+
+.font-2 {
+  color: rgb(110, 0, 0);
+  text-shadow: 1px 1px 3px black;
+}
+
+.font-3 {
+  color: rgb(0, 0, 126);
+  text-shadow: 1px 1px 3px black;
 }
 
 .pady {
