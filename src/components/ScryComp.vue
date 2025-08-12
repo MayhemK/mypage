@@ -19,4 +19,8 @@ const card = computed(() => AppState.card)
 </template>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+img {
+  object-fit: cover;
+}
+</style>

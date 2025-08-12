@@ -1,21 +1,18 @@
 <script setup>
+import { AppState } from '@/AppState.js';
 import { Card } from '@/models/Card.js';
+import { computed } from 'vue';
 
-defineProps({
-  card: { type: Card, required: true }
-})
+const card = computed(() => AppState.card)
 </script>
 
 
 <template>
-  <div class="card">
-    <img v-if="card.imageUrl" :src="card.imageUrl" alt="">
-    <img v-else src="https://static.wikia.nocookie.net/mtgsalvation_gamepedia/images/f/f8/Magic_card_back.jpg" alt="">
-    <div class="card-body fw-bold">
-
-    </div>
-    <div class="card-body">
-      {{ card }}
+  <div class="col-12">
+    <div class="card">
+      <div class="card-title">
+        <b>{{ card.name }}</b>
+      </div>
     </div>
   </div>
 </template>

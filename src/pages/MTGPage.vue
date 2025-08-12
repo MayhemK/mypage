@@ -3,16 +3,15 @@ import { AppState } from '@/AppState.js';
 import MtgComp from '@/components/MtgComp.vue';
 import ScryComp from '@/components/ScryComp.vue';
 import { mtgService } from '@/services/MTGService.js';
-import { computed, onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 
-const cards = computed(() => AppState.cards)
-
+const info = ref(false)
 onMounted(() => {
 
 })
 
-async function getCards() {
-  await mtgService.getCards()
+function toggleInfo() {
+  info.value = !info.value
 }
 
 async function getRandomCard() {
@@ -23,21 +22,19 @@ async function getRandomCard() {
 
 
 <template>
-  <!-- <section v-if="cards" class="container">
-    <div class="row">
-      <div v-for="card in cards" :key="card.id" class="col-3">
-        <MtgComp :card="card" />
-      </div>
-    </div>
-  </section> -->
   <section class="container">
     <div class="row justify-content-center">
-      <div class="col-6 text-center my-5">
+      <div class="col-12 text-center mt-5">
         <div>
           <div class="btn p-5 btn-warning" @click="getRandomCard()">Random Card</div>
-          <ScryComp />
-          <!-- <div class="btn btn-secondary" @click="getCards()">More Info click this to show info like names prices </div> -->
+          <div class="btn btn-secondary mx-2" @click="toggleInfo()">More Info</div>
         </div>
+      </div>
+      <div class="col-6 text-center ">
+        <ScryComp />
+      </div>
+      <div v-if="info == true" class="col-6 text-center my-5 ">
+        <MtgComp />
       </div>
     </div>
   </section>
