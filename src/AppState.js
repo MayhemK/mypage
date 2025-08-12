@@ -34,6 +34,8 @@ export const AppState = reactive({
     { id: 8, name: 'Turkey', power: 800, price: 3000, quantity: 0 }
   ],
   /** @type {import('./models/Card.js').Card[]} */
-  cards: []
+  cards: [],
+  /** @type {import('./models/Card.js').Card} */
+  card: null
 })
 

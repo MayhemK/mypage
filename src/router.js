@@ -57,9 +57,9 @@ const routes = [
     component: loadPage('ClonePage')
   },
   {
-    path: '/ai',
-    name: 'AIPage',
-    component: loadPage('AIPage')
+    path: '/mtg',
+    name: 'MTGPage',
+    component: loadPage('MTGPage')
   },
   {
     path: '/account',

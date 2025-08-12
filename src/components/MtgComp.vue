@@ -12,10 +12,10 @@ defineProps({
     <img v-if="card.imageUrl" :src="card.imageUrl" alt="">
     <img v-else src="https://static.wikia.nocookie.net/mtgsalvation_gamepedia/images/f/f8/Magic_card_back.jpg" alt="">
     <div class="card-body fw-bold">
-      {{ card.name }}
+
     </div>
     <div class="card-body">
-      {{ card.text }}
+      {{ card }}
     </div>
   </div>
 </template>

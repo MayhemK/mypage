@@ -18,29 +18,29 @@
           </div>
           <div class="card-body">
             <div>
-              <RouterLink :to="{ name: 'GregsList' }" class="btn btn-success m-2">
+              <RouterLink :to="{ name: 'GregsList' }" class="btn btn-mk m-2">
                 Gregslist
               </RouterLink>
               <div class="ms-2">A simple Craig's List clone</div>
             </div>
             <div>
-              <RouterLink :to="{ name: 'Code' }" class="btn btn-success m-2">
+              <RouterLink :to="{ name: 'Code' }" class="btn btn-mk m-2">
                 Code Page
               </RouterLink>
               <div class="ms-2">A Facebook type page</div>
             </div>
             <div>
-              <RouterLink :to="{ name: 'Clicker' }" class="btn btn-success m-2">
+              <RouterLink :to="{ name: 'Clicker' }" class="btn btn-mk m-2">
                 Clicker
               </RouterLink>
               <div class="ms-2">A Clicker Game</div>
             </div>
             <div>
-              <RouterLink :to="{ name: 'Template' }" class="btn btn-success m-2">Website</RouterLink>
+              <RouterLink :to="{ name: 'Template' }" class="btn btn-mk m-2">Website</RouterLink>
               <div class="ms-2">A simple website with themes</div>
             </div>
             <div>
-              <RouterLink :to="{ name: 'AIPage' }" class="btn btn-success m-2">MTG Cards</RouterLink>
+              <RouterLink :to="{ name: 'MTGPage' }" class="btn btn-mk m-2">MTG Cards</RouterLink>
               <div class="ms-2">A test implementing MTG api into a page</div>
             </div>
           </div>

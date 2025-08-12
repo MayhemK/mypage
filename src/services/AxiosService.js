@@ -2,9 +2,13 @@ import Axios from 'axios'
 import { baseURL } from '../env.js'
 import { logger } from '../utils/Logger.js'
 
-export const mtg = Axios.create({
-  baseURL: 'https://api.magicthegathering.io/',
+export const scryfall = Axios.create({
+  baseURL: 'https://api.scryfall.com',
   timeout: 8000
+  // headers: {
+  //   'User-Agent': 'CardIndex/0.1 (mayhemk@msn.com)',
+  //   'Accept': 'application/json'
+
 })
 export const sandBox = Axios.create({
   baseURL: 'https://sandbox.codeworksacademy.com/',

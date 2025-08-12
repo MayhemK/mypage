@@ -32,17 +32,17 @@ watch(theme, () => {
       <div class="collapse navbar-collapse " id="navbar-links">
         <ul class="navbar-nav">
           <li>
-            <RouterLink :to="{ name: 'About' }" class="btn text-green selectable">
+            <RouterLink :to="{ name: 'About' }" class="btn text-mk selectable">
               About
             </RouterLink>
           </li>
           <!-- <li>
-            <RouterLink :to="{ name: 'GregsList' }" class="btn text-green selectable">
+            <RouterLink :to="{ name: 'GregsList' }" class="btn text-mk selectable">
               Gregslist Page
             </RouterLink>
           </li>
           <li>
-            <RouterLink :to="{ name: 'Code' }" class="btn text-green selectable">
+            <RouterLink :to="{ name: 'Code' }" class="btn text-mk selectable">
               Code Page
             </RouterLink>
           </li> -->
