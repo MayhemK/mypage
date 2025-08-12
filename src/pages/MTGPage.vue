@@ -30,10 +30,10 @@ async function getRandomCard() {
           <div class="btn btn-secondary mx-2" @click="toggleInfo()">More Info</div>
         </div>
       </div>
-      <div class="col-6 text-center ">
+      <div class="col-7 text-center ">
         <ScryComp />
       </div>
-      <div v-if="info == true" class="col-6 text-center my-5 ">
+      <div v-if="info == true" class="col-5 text-center my-5 ">
         <MtgComp />
       </div>
     </div>

@@ -12,6 +12,5 @@ export class Card {
     this.price = data.prices?.usd
     this.foil = data.prices?.usd_foil
     this.etched = data.prices?.usd_etched
-
   }
 }
