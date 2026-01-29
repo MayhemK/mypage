@@ -62,6 +62,11 @@ const routes = [
     component: loadPage('MTGPage')
   },
   {
+    path: '/store',
+    name: 'Store',
+    component: loadPage('StorePage')
+  },
+  {
     path: '/account',
     name: 'Account',
     component: loadPage('AccountPage'),

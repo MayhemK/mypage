@@ -43,6 +43,10 @@
               <RouterLink :to="{ name: 'MTGPage' }" class="btn btn-mk m-2">MTG Cards</RouterLink>
               <div class="ms-2">A test implementing MTG api into a page</div>
             </div>
+            <div>
+              <RouterLink :to="{ name: 'Store' }" class="btn btn-mk m-2">Store Template</RouterLink>
+              <div class="ms-2">A template for a store page!</div>
+            </div>
           </div>
         </div>
       </div>
