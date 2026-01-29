@@ -1,5 +1,30 @@
 <script setup>
 
+
+
+var items = [
+  {
+    Name: "A",
+    Price: 1,
+    Description: "stuff",
+    Image: "https://images.unsplash.com/photo-1467139840664-96b244a66825?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    Name: "B",
+    Price: 1,
+    Description: "More Stuff",
+    Image: "https://images.unsplash.com/photo-1609041958269-fc44467d925d?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }, {
+    Name: "C",
+    Price: 1,
+    Description: "even more stuff",
+    Image: "https://images.unsplash.com/photo-1474666488182-66ec723476c6?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+]
+
+
+
+
 </script>
 
 
@@ -18,24 +43,29 @@
       <div class="col-12">
         <div class="container">
           <div class="row">
-            <div class="col-3 text-center my-2">
-              <div class="card">
-                <img
-                  src="https://images.unsplash.com/photo-1769295746989-9b2144a4e20c?q=80&w=862&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="" class="card-img-top">
-                <div class="card-body">
-                  <div class="card-title">heiiiii</div>
-                  hello
+            <div v-for="item in items" :key="item.Name" class="col-3 text-center my-2">
+              <div>
+                <div class="card">
+                  <img :src="item.Image" alt="" class="card-img-top">
+                  <div class="card-body">
+                    <div class="card-title">{{ item.Name }}</div>
+                    <div class="card-text">{{ item.Description }}</div>
+                  </div>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
+
       </div>
     </div>
   </section>
 </template>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+img {
+  object-fit: cover;
+  max-height: 200px;
+}
+</style>
