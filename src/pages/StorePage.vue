@@ -20,6 +20,12 @@ var items = [
     Description: "even more stuff",
     Image: "https://images.unsplash.com/photo-1474666488182-66ec723476c6?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
+  {
+    Name: "D",
+    Price: 1,
+    Description: "even even more stuff",
+    Image: "https://images.unsplash.com/photo-1674884283579-d6e496502be8?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }
 ]
 
 
@@ -48,7 +54,8 @@ var items = [
                 <div class="card">
                   <img :src="item.Image" alt="" class="card-img-top">
                   <div class="card-body">
-                    <div class="card-title">{{ item.Name }}</div>
+                    <div class="card-title fw-bold">{{ item.Name }}</div>
+                    <hr>
                     <div class="card-text">{{ item.Description }}</div>
                   </div>
                 </div>
