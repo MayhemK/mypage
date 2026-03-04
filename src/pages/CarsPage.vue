@@ -37,10 +37,10 @@ async function getCars() {
   </section>
   <section v-if="account" class="container">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8 col-12">
         <CarForm />
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 d-none d-md-block">
         <img src="https://i.etsystatic.com/17211177/r/il/ba78ca/1554305857/il_794xN.1554305857_426y.jpg" alt=""
           class="w-100">
       </div>
